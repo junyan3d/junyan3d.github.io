@@ -44,5 +44,3 @@ permalink: /about/
 ### 联系我
 
 [junyan3d@gmail.com](mailto:junyan3d@gmail.com)
-
-{% include social-links.html %}

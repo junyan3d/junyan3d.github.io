@@ -21,3 +21,16 @@ _site/
 
 !Gemfile.lock
 !scripts/serve.sh
+
+# Keep private documents, credentials and local scratch files out of publication.
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.pdf
+*.pptx
+*.tmp
+*.bak
+local-archive/

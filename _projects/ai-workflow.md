@@ -2,7 +2,7 @@
 {
   "title": "AI 辅助车型设计",
   "category": "工作",
-  "description": "ComfyUI、DeepSeek 与可灵的联合探索：车型图像生成、摩托车视角旋转与本地 ComfyUI 工作流。",
+  "description": "ComfyUI、DeepSeek 与可灵AI的联合探索：车型图像生成、摩托车视角旋转与本地 ComfyUI 工作流。",
   "order": 4.5,
   "cover": "/assets/images/ai-workflow-2.jpg",
   "images": [
@@ -31,4 +31,4 @@
   ]
 }
 ---
-ComfyUI、DeepSeek 与可灵的联合探索：车型图像生成、摩托车视角旋转与本地 ComfyUI 工作流。
+ComfyUI、DeepSeek 与可灵AI的联合探索：车型图像生成、摩托车视角旋转与本地 ComfyUI 工作流。
