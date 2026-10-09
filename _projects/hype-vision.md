@@ -14,6 +14,11 @@
       "src": "/assets/images/hype-vision-2.jpg",
       "alt": "HYPE VISION-配色展示",
       "caption": "HYPE VISION-配色展示"
+    },
+    {
+      "src": "/assets/images/hype-vision-helmet-wireframe.webp",
+      "alt": "HYPE VISION 头盔模型线框",
+      "caption": "HYPE VISION · 头盔模型线框"
     }
   ],
   "videos": [
