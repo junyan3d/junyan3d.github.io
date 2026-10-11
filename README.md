@@ -5,13 +5,13 @@
 - 正式网站：[junyan3d.github.io](https://junyan3d.github.io/)
 - 源码仓库：[junyan3d/junyan3d.github.io](https://github.com/junyan3d/junyan3d.github.io)
 
-当前版本为 **v0.1.0**，首个公开发布版本。
+已发布版本为 **v0.1.0**。本地管理器的分类、个人资料数据结构调整尚未同步线上，首次使用发布按钮时会一并列出待确认改动。
 
 ## 1. 项目解决什么问题
 
 将设计记录、不同学习与工作阶段的作品、个人介绍集中在一个可维护的网站中。维护者通过编辑文件更新内容，访客通过浏览器阅读文章、按分类浏览作品、查看图片和主动播放项目视频。
 
-本项目是静态网站，没有后台管理、账号登录或上传界面。原始简历、作品集 PDF 和演示文稿不随网站公开；网站展示的是整理后的文字与素材副本。
+公开网站是静态网站，没有在线后台或访客账号。本机提供独立的图形化内容管理器，可通过表单维护内容与选择素材。原始简历、作品集 PDF 和演示文稿不随网站公开；网站展示的是整理后的文字与素材副本。
 
 ## 2. 主要功能
 
@@ -79,7 +79,8 @@ ruby vendor/bundle/gems/bundler-2.4.22/exe/bundle exec jekyll build
 | 文件或目录 | 用途 |
 | --- | --- |
 | `_config.yml` | 网站名称、简介、邮箱、正式网址、分页数量、社交链接及集合配置 |
-| `about.md` | 个人介绍与经历 |
+| `_data/profile.yml` | 个人介绍与经历；about.md 为展示模板 |
+| `_data/categories.yml` | 作品分类及顺序 |
 | `_posts/` | Markdown 博客文章 |
 | `_projects/` | 项目资料及详情正文 |
 | `assets/images/` | 作品图片与视频预览图 |
@@ -89,7 +90,11 @@ ruby vendor/bundle/gems/bundler-2.4.22/exe/bundle exec jekyll build
 | `css/personal.css`、`js/personal.js` | 自定义样式与交互 |
 | `.github/workflows/pages.yml` | 自动构建与发布流程 |
 
-`social_links` 每项包含 `title`、`icon`、`url`，可选 `hint`；当前图标支持 `bilibili`、`douyin`、`xiaohongshu`、`github`。主页面的 `header-img` 在页面头部配置，首页默认封面由 `_config.yml` 设置。封面生成提示词保存在 `scripts/cover-prompts.md`。
+`social_links` 每项包含 `title`、`icon`、`url`，可选 `hint`；当前图标支持 `bilibili`、`douyin`、`xiaohongshu`、`github`。关于页经历由 `_data/profile.yml` 管理，分类由 `_data/categories.yml` 管理。主页面的 `header-img` 在页面头部配置，首页默认封面由 `_config.yml` 设置。封面生成提示词保存在 `scripts/cover-prompts.md`。
+
+### 图形化管理（推荐）
+
+双击外层的 `管理网站.app`（备用入口 `管理网站.command`） 即可打开本机管理器。文章、作品、分类、个人资料、封面和社交链接都可在界面中维护；保存只修改本地，发布需单独确认。使用说明见外层 `manager/README.md`。管理器、原件、备份和回收区位于网站目录之外，不参与公开发布。
 
 ### 写文章
 
@@ -99,7 +104,7 @@ ruby vendor/bundle/gems/bundler-2.4.22/exe/bundle exec jekyll build
 
 在 `_projects/` 新建 `slug.md`，使用 YAML 或现有项目的 JSON 头部，正文使用 Markdown：
 
-- `category` 必须为「工作」「硕士」或「本科」，才能出现在对应作品分组。
+- `category` 必须与 `_data/categories.yml` 中的分类名称一致，才能出现在对应分组。现有分类为「工作」「硕士」「本科」，可在管理器中新增或调整。
 - `order` 为排序数值；`cover` 为项目卡片封面。
 - `images` 每项包含 `src`、`alt`、`caption`。
 - `videos` 每项包含 `src`、`poster`、`title`；没有视频时使用 `videos: []`。
