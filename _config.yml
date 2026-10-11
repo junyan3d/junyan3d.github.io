@@ -25,7 +25,7 @@ defaults:
     values:
       layout: project
       header-img: assets/covers/works.webp
-exclude: [.DS_Store, local-archive, vendor, scripts, README.md, Gemfile, Gemfile.lock, less, .bundle, SOURCE.md]
+exclude: [AGENTS.md, .DS_Store, local-archive, vendor, scripts, README.md, Gemfile, Gemfile.lock, less, .bundle, SOURCE.md]
 service-worker: false
 social_links:
   - title: B站
