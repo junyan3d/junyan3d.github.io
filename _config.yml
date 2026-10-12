@@ -1,19 +1,20 @@
 title: 菌岩
 SEOTitle: 菌岩 · 设计与记录
 email: junyan3d@gmail.com
-description: "关于形态、光影与设计的持续探索。"
-keyword: "菌岩, Blender, 工业设计, 三维设计, 作品集"
-url: "https://junyan3d.github.io"
+description: 关于形态、光影与设计的持续探索。
+keyword: 菌岩, Blender, 工业设计, 三维设计, 作品集
+url: https://junyan3d.github.io
 baseurl: ""
 header-img: assets/covers/home-v2.webp
-intro: "3D 设计师，专注 Blender 建模渲染与 AI 辅助设计。"
+intro: 3D 设计师，专注 Blender 与 AI 辅助设计。
 timezone: Asia/Shanghai
 markdown: kramdown
 highlighter: rouge
 permalink: /blog/:year/:month/:day/:title/
 paginate: 6
 paginate_path: /page/:num/
-plugins: [jekyll-paginate]
+plugins:
+  - jekyll-paginate
 collections:
   projects:
     output: true
@@ -25,7 +26,18 @@ defaults:
     values:
       layout: project
       header-img: assets/covers/works.webp
-exclude: [AGENTS.md, .DS_Store, local-archive, vendor, scripts, README.md, Gemfile, Gemfile.lock, less, .bundle, SOURCE.md]
+exclude:
+  - AGENTS.md
+  - .DS_Store
+  - local-archive
+  - vendor
+  - scripts
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - less
+  - .bundle
+  - SOURCE.md
 service-worker: false
 social_links:
   - title: B站
@@ -34,11 +46,10 @@ social_links:
   - title: 抖音
     icon: douyin
     url: https://v.douyin.com/kohQV_aAeJA/
-    hint: "抖音号：89655218894"
+    hint: 抖音号：89655218894
   - title: 小红书
     icon: xiaohongshu
     url: https://www.xiaohongshu.com/user/profile/6a8d3e540000000013031401
   - title: GitHub
     icon: github
     url: https://github.com/junyan3d
-
